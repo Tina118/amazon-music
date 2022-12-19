@@ -1,3 +1,7 @@
-const App = () => <h1>Hello World</h1>
+import { Navigation } from 'components'
+
+const App = () => {
+  return <Navigation />
+}
 
 export default App

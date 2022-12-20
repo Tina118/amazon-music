@@ -56,7 +56,7 @@ const Searchbar = () => {
   const classes = useStyles()
 
   return (
-    <Flex className={classes.search} marginLeft="400px">
+    <Flex className={classes.search} marginLeft="350px">
       <InputBase
         placeholder="Search…"
         classes={{

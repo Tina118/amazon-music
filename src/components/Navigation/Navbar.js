@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Navbar = styled.nav`
     backdrop-filter: blur(30px);
-    background-color: #0a0b0b;
+    background-color: transparent;
     color: #fff;
     width: 100%;
     height: 72px;

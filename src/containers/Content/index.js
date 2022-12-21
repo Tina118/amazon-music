@@ -1,5 +1,5 @@
 import { Flex } from 'rebass'
-import { Text } from 'common_components'
+import { Text} from 'common_components'
 import { MusicCard } from 'components'
 
 import { FeaturedSongs } from 'mockData/FeaturedSongs'
@@ -14,7 +14,7 @@ const Content = () => {
         style={{
           paddingTop: '24px',
           paddingBottom: '12px',
-          paddingLeft: '36px',
+          paddingLeft: '30px',
         }}
       >
         <Text color="white" fontSize="26px" paddingBottom="16px">

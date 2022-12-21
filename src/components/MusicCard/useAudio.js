@@ -31,6 +31,15 @@ export const AudioProvider = ({ children }) => {
   }
 
   return (
-    <Provider value={{ setSong, pauseSong, isPlaying }}>{children}</Provider>
+    <Provider
+      value={{
+        setSong,
+        pauseSong,
+        isPlaying,
+        song
+      }}
+    >
+      {children}
+    </Provider>
   )
 }

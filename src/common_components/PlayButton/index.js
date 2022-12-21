@@ -29,7 +29,7 @@ const Icon = styled(Flex)`
 
 const PlayButton = () => (
   <Icon>
-    <Circle className="circle" />
+    <Circle />
     <Play />
   </Icon>
 )

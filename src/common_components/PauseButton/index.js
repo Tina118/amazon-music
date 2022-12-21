@@ -28,8 +28,8 @@ const Icon = styled(Flex)`
 `
 
 const PauseButton = () => (
-  <Icon className="hello">
-    <Circle className="circle" />
+  <Icon>
+    <Circle />
     <Pause />
   </Icon>
 )

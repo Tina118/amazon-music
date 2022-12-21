@@ -1,15 +1,16 @@
 import { Flex } from 'rebass'
 
-import { Navigation } from 'components'
+import { Navigation , Footer } from 'components'
 import Content from 'containers/Content'
-import {AudioProvider} from 'components';
+import { AudioProvider } from 'components'
 
 const App = () => {
   return (
     <Flex flexDirection="column">
       <AudioProvider>
-      <Navigation />
-      <Content />
+        <Navigation />
+        <Content />
+        <Footer />
       </AudioProvider>
     </Flex>
   )

@@ -4,10 +4,10 @@ import gif from 'assets/music.gif'
 
 const Gif = styled.img`
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 25%;
-  width:100px;
-  height:50px;
+  width:90px;
+  height:30px;
 
 `
 

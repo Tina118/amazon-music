@@ -2,7 +2,7 @@ import { Flex } from 'rebass'
 import { useState } from 'react'
 import styled from 'styled-components'
 import Slider from '@material-ui/core/Slider'
-import { useRecoilValue } from 'recoil'
+import { useSetRecoilState, useRecoilValue } from 'recoil'
 import SkipPreviousIcon from '@material-ui/icons/SkipPrevious'
 import SkipNextIcon from '@material-ui/icons/SkipNext'
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline'
@@ -10,7 +10,7 @@ import PauseCircleOutlineIcon from '@material-ui/icons/PauseCircleOutline'
 
 import { Text } from 'common_components'
 import { useAudio } from 'components'
-import { selectedSong } from 'recoil/atom'
+import { selectedSong, selectedPlaylist } from 'recoil/atom'
 
 const Box = styled(Flex)`
   backdrop-filter: blur(30px);
@@ -31,14 +31,33 @@ const Image = styled.img`
 `
 
 const Footer = () => {
-  const { song } = useAudio()
+  const { song, setSong } = useAudio()
   const songInfo = useRecoilValue(selectedSong)
+  const setSelectedSong = useSetRecoilState(selectedSong)
+  const index = songInfo?.index
+  const playlist = useRecoilValue(selectedPlaylist)
 
   const [value, setValue] = useState(0)
   song &&
     song.addEventListener('timeupdate', () => {
       setValue(parseInt((song.currentTime / song.duration) * 100))
     })
+
+  const handleNext = () => {
+    if (index < playlist.length-1) {
+      setSong(playlist[index + 1]?.song)
+      setSelectedSong({ ...playlist[index + 1], index: index + 1 })
+    }
+  }
+
+  const handlePrev = () => {
+    if (index > 0) {
+      setSong(playlist[index - 1]?.song)
+      setSelectedSong({ ...playlist[index - 1], index: index - 1 })
+    }
+  }
+
+  console.log(songInfo)
 
   return (
     <>
@@ -72,8 +91,10 @@ const Footer = () => {
                 style={{
                   fontSize: '60px',
                   marginRight: '100px',
-                  cursor: 'pointer',
+                  cursor: index > 0 ? 'pointer' : '',
+                  color: index > 0 ? 'white' : 'grey',
                 }}
+                onClick={handlePrev}
               />
               {song?.paused ? (
                 <PlayCircleOutlineIcon
@@ -88,8 +109,10 @@ const Footer = () => {
                 style={{
                   fontSize: '60px',
                   marginLeft: '100px',
-                  cursor: 'pointer',
+                  cursor: index < playlist.length - 1 ? 'pointer' : '',
+                  color: index < playlist.length - 1 ? 'white' : 'grey',
                 }}
+                onClick={handleNext}
               />
             </Flex>
           </Flex>

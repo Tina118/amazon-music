@@ -1,13 +1,12 @@
-import { useState } from 'react'
 import { Flex } from 'rebass'
 import Card from '@material-ui/core/Card'
 import CardContent from '@material-ui/core/CardContent'
 import styled from 'styled-components'
-import { useSetRecoilState } from 'recoil'
+import { useSetRecoilState ,useRecoilValue} from 'recoil'
 
 import { Text, PlayButton, PauseButton, MusicGif } from 'common_components'
 import { useAudio } from './useAudio'
-import { selectedSong } from 'recoil/atom'
+import { selectedSong ,selectedPlaylist} from 'recoil/atom'
 
 const MainCard = styled(Card)`
   width: 200px;
@@ -45,20 +44,25 @@ const Box = styled(Flex)`
 `
 
 const MusicCard = ({ playlist }) => {
-  const [lastPlayed, setLastPlayed] = useState()
+ 
   const { setSong, pauseSong, isPlaying } = useAudio()
   const setSelectedSong = useSetRecoilState(selectedSong)
+  const setSelectedPlaylist = useSetRecoilState(selectedPlaylist)
+  const playedSong = useRecoilValue(selectedSong)
 
   const handleSong = (music, index) => {
-    if (lastPlayed === music && isPlaying) {
+    if (playedSong?.song === music && isPlaying) {
       pauseSong()
       return
     }
     setSong(music)
-    setLastPlayed(music)
-    setSelectedSong(playlist[index])
+    setSelectedSong({...playlist[index],index,playlist})
+    setSelectedPlaylist(playlist)
 
   }
+
+  console.log(playedSong)
+
   return (
     <Flex>
       {playlist?.map(({ image, name, singer, song }, index) => (
@@ -66,7 +70,7 @@ const MusicCard = ({ playlist }) => {
           <CardContent style={{ padding: 0 }}>
             <Box onClick={() => handleSong(song, index)}>
               <Image src={image} />
-              {isPlaying && lastPlayed === song ? (
+              {isPlaying && playedSong?.song==song ? (
                 <>
                   <PauseButton />
                   <MusicGif />

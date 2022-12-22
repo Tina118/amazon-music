@@ -6,3 +6,8 @@ export const selectedSong = atom({
     default:{}
 
 })
+
+export const selectedPlaylist = atom({
+    key:'selected_playlist',
+    default:{}
+})

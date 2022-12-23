@@ -28,22 +28,26 @@ const Image = styled.img`
   width: 60px;
   height: 60px;
   border-radius: 5px;
+
+  @media (max-width: 767px) {
+    display: none;
+  }
 `
 
 const Footer = () => {
-  const { song, setSong, pauseSong, isPlaying ,setIsPlaying} = useAudio()
+  const { song, setSong, pauseSong, isPlaying, setIsPlaying } = useAudio()
   const songInfo = useRecoilValue(selectedSong)
   const setSelectedSong = useSetRecoilState(selectedSong)
   const index = songInfo?.index
   const playlist = useRecoilValue(selectedPlaylist)
 
   const [value, setValue] = useState(0)
-  const [duration,setDuration] = useState(0)
+  const [duration, setDuration] = useState(0)
   song &&
     song.addEventListener('timeupdate', () => {
       setValue(parseInt((song.currentTime / song.duration) * 100))
       setDuration((value * song.duration) / 100)
-      if(song.currentTime===song.duration){
+      if (song.currentTime === song.duration) {
         setIsPlaying(false)
       }
     })
@@ -52,7 +56,6 @@ const Footer = () => {
     if (index < playlist.length - 1) {
       setSong(playlist[index + 1]?.song)
       setSelectedSong({ ...playlist[index + 1], index: index + 1 })
-      
     }
   }
 
@@ -70,7 +73,7 @@ const Footer = () => {
   }
 
   const handlePlay = () => {
-    song.currentTime=duration
+    song.currentTime = duration
     song.play()
     setIsPlaying(true)
   }
@@ -78,7 +81,15 @@ const Footer = () => {
   return (
     <>
       {song && (
-        <Box flexDirection="column">
+        <Box
+          flexDirection="column"
+          sx={{
+            [`@media (max-width: 767px)`]: {
+              alignItems: 'center',
+              justifyContent: 'center',
+            },
+          }}
+        >
           <Slider
             value={value}
             style={{ padding: 0, color: 'white', marginBottom: '10px' }}
@@ -93,6 +104,11 @@ const Footer = () => {
               justifyContent="center"
               width="300px"
               marginRight="20px"
+              sx={{
+                [`@media (max-width: 1024px)`]: {
+                  display: 'none',
+                },
+              }}
             >
               <Text fontSize="18px" textOverflow="ellipsis" whiteSpace="nowrap">
                 {songInfo?.name}
@@ -110,6 +126,20 @@ const Footer = () => {
               justifyContent="space-between"
               alignItems="center"
               marginLeft="100px"
+              sx={{
+                [`@media (max-width: 1024px)`]: {
+                  marginLeft: '300px',
+                },
+                [`@media (max-width: 960px)`]: {
+                  marginLeft: '200px',
+                },
+                [`@media (max-width: 768px)`]: {
+                  marginLeft: '150px',
+                },
+                [`@media (max-width: 767px)`]: {
+                  marginLeft: '0px',
+                },
+              }}
             >
               <SkipPreviousIcon
                 style={{

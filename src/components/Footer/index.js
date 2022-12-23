@@ -43,6 +43,9 @@ const Footer = () => {
     song.addEventListener('timeupdate', () => {
       setValue(parseInt((song.currentTime / song.duration) * 100))
       setDuration((value * song.duration) / 100)
+      if(song.currentTime===song.duration){
+        setIsPlaying(false)
+      }
     })
 
   const handleNext = () => {

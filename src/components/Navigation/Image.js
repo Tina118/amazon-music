@@ -5,6 +5,8 @@ const Image = styled.img`
   width: 160px;
   margin-right: 14px;
   margin-top: 5px;
+
+  
 `
 
 export default Image;

@@ -2,8 +2,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import HeadsetIcon from '@material-ui/icons/Headset'
 import HearingIcon from '@material-ui/icons/Hearing'
 import AccountCircle from '@material-ui/icons/AccountCircle'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
+import MenuIcon from '@material-ui/icons/Menu';
 
 import image from 'assets/logo.png'
 
@@ -47,6 +46,9 @@ const Navigation = () => {
         </ListItem>
         <ListItem>
           <AccountCircle style={{ fontSize: '45px' }} />
+        </ListItem>
+        <ListItem>
+          <MenuIcon />
         </ListItem>
       </UnorderedList>
     </Navbar>

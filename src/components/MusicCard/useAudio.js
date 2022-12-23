@@ -22,7 +22,6 @@ export const AudioProvider = ({ children }) => {
     }
     const newSong = new Audio(url)
     newSong.play()
-    //newSong.currentTime = duration
     _setSong(newSong)
     setIsPlaying(true)
   }

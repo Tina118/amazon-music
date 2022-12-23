@@ -13,6 +13,33 @@ const ListItem = styled.li`
   justify-content: space-around;
   max-width: 1600px;
   margin-right: 30px;
+
+  @media (max-width: 1280px) {
+    margin-right:10px;
+    &:nth-last-child(2),&:nth-last-child(3) {
+      display: none;
+    }
+  
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  @media (max-width: 960px) {
+    &:not(:first-child) {
+      display: none;
+    }
+
+    &:first-child {
+      justify-content: flex-start;
+    }
+
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
 `
 
 export default ListItem

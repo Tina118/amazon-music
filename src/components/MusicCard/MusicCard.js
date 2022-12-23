@@ -19,6 +19,32 @@ const Image = styled.img`
   width: 200px;
   height: 200px;
   border-radius: 10px;
+
+  @media (max-width: 1280px) {
+    width: 180px;
+    height: 180px;
+  }
+
+  @media (max-width: 1024px) {
+    width: 135px;
+    height: 135px;
+  }
+
+  @media (max-width: 960px) {
+    width: 100px;
+    height: 100px;
+  }
+
+  @media (max-width: 768px) {
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 767px) {
+    width: 200px;
+    height: 200px;
+  }
 `
 
 const Box = styled(Flex)`
@@ -60,7 +86,15 @@ const MusicCard = ({ playlist }) => {
   }
 
   return (
-    <Flex>
+    <Flex
+      sx={{
+        [`@media (max-width: 767px)`]: {
+          flexDirection: 'column',
+          alignItems:'center',
+          justifyContent:'center'
+        },
+      }}
+    >
       {playlist?.map(({ image, name, singer, song }, index) => (
         <MainCard style={{ backgroundColor: 'black' }} key={name}>
           <CardContent style={{ padding: 0 }}>

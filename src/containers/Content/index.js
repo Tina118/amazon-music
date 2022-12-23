@@ -27,7 +27,7 @@ const Content = () => {
         style={{
           paddingTop: '24px',
           paddingBottom: '12px',
-          paddingLeft: '36px',
+          paddingLeft: '30px',
         }}
       >
         <Text color="white" fontSize="26px" paddingBottom="16px">
@@ -40,7 +40,7 @@ const Content = () => {
         style={{
           paddingTop: '24px',
           paddingBottom: '12px',
-          paddingLeft: '36px',
+          paddingLeft: '30px',
         }}
       >
         <Text color="white" fontSize="26px" paddingBottom="16px">

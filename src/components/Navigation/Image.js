@@ -6,6 +6,10 @@ const Image = styled.img`
   margin-right: 14px;
   margin-top: 5px;
 
+  @media (max-width: 767px) {
+    width: 100px;  
+  }
+
   
 `
 

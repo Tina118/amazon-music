@@ -11,6 +11,10 @@ const UnorderedList = styled.ul`
   margin-inline-end: auto;
   padding-inline-start: 34px;
   max-width: 1600px;
+
+  @media (max-width: 767px) {
+    padding-inline-start: 20px;
+  }
 `
 
 export default UnorderedList;

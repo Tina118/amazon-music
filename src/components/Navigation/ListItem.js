@@ -15,7 +15,7 @@ const ListItem = styled.li`
   margin-right: 30px;
 
   @media (max-width: 1280px) {
-    margin-right:10px;
+    width:150px;
     &:nth-last-child(2),&:nth-last-child(3) {
       display: none;
     }
@@ -23,6 +23,7 @@ const ListItem = styled.li`
     &:last-child {
       display: flex;
       justify-content: flex-end;
+      width:100%;
     }
   }
 

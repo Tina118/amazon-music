@@ -13,6 +13,26 @@ const MainCard = styled(Card)`
   height: 300px;
   padding: 0;
   margin-right: 30px;
+
+  @media (max-width: 1280px) {
+    height: 250px;
+  }
+
+  @media (max-width: 1024px) {
+    height: 200px;
+  }
+
+  @media (max-width: 960px) {
+    height: 170px;
+  }
+
+  @media (max-width: 768px) {
+    height: 150px;  
+  }
+
+  @media (max-width: 767px) {
+    height: 300px;  
+  }
 `
 
 const Image = styled.img`

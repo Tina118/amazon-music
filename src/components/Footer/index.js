@@ -31,22 +31,25 @@ const Image = styled.img`
 `
 
 const Footer = () => {
-  const { song, setSong } = useAudio()
+  const { song, setSong, pauseSong, isPlaying ,setIsPlaying} = useAudio()
   const songInfo = useRecoilValue(selectedSong)
   const setSelectedSong = useSetRecoilState(selectedSong)
   const index = songInfo?.index
   const playlist = useRecoilValue(selectedPlaylist)
 
   const [value, setValue] = useState(0)
+  const [duration,setDuration] = useState(0)
   song &&
     song.addEventListener('timeupdate', () => {
       setValue(parseInt((song.currentTime / song.duration) * 100))
+      setDuration((value * song.duration) / 100)
     })
 
   const handleNext = () => {
-    if (index < playlist.length-1) {
+    if (index < playlist.length - 1) {
       setSong(playlist[index + 1]?.song)
       setSelectedSong({ ...playlist[index + 1], index: index + 1 })
+      
     }
   }
 
@@ -57,7 +60,17 @@ const Footer = () => {
     }
   }
 
-  console.log(songInfo)
+  const handleChange = ({ newValue }) => {
+    setDuration((value * song.duration) / 100)
+    song.currentTime = duration
+    setValue(newValue)
+  }
+
+  const handlePlay = () => {
+    song.currentTime=duration
+    song.play()
+    setIsPlaying(true)
+  }
 
   return (
     <>
@@ -66,6 +79,7 @@ const Footer = () => {
           <Slider
             value={value}
             style={{ padding: 0, color: 'white', marginBottom: '10px' }}
+            onChange={handleChange}
           />
           <Flex marginBottom="10px">
             <Image src={songInfo?.image} />
@@ -77,8 +91,15 @@ const Footer = () => {
               width="300px"
               marginRight="20px"
             >
-              <Text fontSize="18px">{songInfo?.name}</Text>
-              <Text fontSize="14px" color="#ffffff99">
+              <Text fontSize="18px" textOverflow="ellipsis" whiteSpace="nowrap">
+                {songInfo?.name}
+              </Text>
+              <Text
+                fontSize="14px"
+                color="#ffffff99"
+                textOverflow="ellipsis"
+                whiteSpace="nowrap"
+              >
                 {songInfo?.singer}
               </Text>
             </Flex>
@@ -96,12 +117,14 @@ const Footer = () => {
                 }}
                 onClick={handlePrev}
               />
-              {song?.paused ? (
+              {!isPlaying ? (
                 <PlayCircleOutlineIcon
+                  onClick={handlePlay}
                   style={{ fontSize: '60px', cursor: 'pointer' }}
                 />
               ) : (
                 <PauseCircleOutlineIcon
+                  onClick={pauseSong}
                   style={{ fontSize: '60px', cursor: 'pointer' }}
                 />
               )}

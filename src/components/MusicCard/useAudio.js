@@ -15,13 +15,14 @@ export const AudioProvider = ({ children }) => {
   const [song, _setSong] = useState()
   const [isPlaying, setIsPlaying] = useState(false)
 
-  const setSong = (url) => {
+  const setSong = ( url ) => {
     if (song) {
       song.pause()
       setIsPlaying(false)
     }
     const newSong = new Audio(url)
     newSong.play()
+    //newSong.currentTime = duration
     _setSong(newSong)
     setIsPlaying(true)
   }
@@ -36,7 +37,8 @@ export const AudioProvider = ({ children }) => {
         setSong,
         pauseSong,
         isPlaying,
-        song
+        setIsPlaying,
+        song,
       }}
     >
       {children}

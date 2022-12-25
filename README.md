@@ -48,11 +48,12 @@ Functionalities:
 <img width="946" alt="image" src="https://user-images.githubusercontent.com/47208932/209459231-2b26ebf8-a0df-41b8-8159-1ccfd717b9d2.png">
 
 **9]It is responsive to most of the devices**
-<img width="648" alt="image" src="https://user-images.githubusercontent.com/47208932/209459341-e96bd71d-274f-456c-a61d-ec9defcb73b5.png">
-<img width="611" alt="image" src="https://user-images.githubusercontent.com/47208932/209459348-ca485f91-7d13-4f79-ad20-79e2af11d6ab.png">
-<img width="572" alt="image" src="https://user-images.githubusercontent.com/47208932/209459353-39fe4dc9-4ba2-4b5c-b0a4-699bb9098778.png">
-<img width="527" alt="image" src="https://user-images.githubusercontent.com/47208932/209459359-e3d7cfde-080f-457a-ad5a-73d066c7c9c7.png">
-<img width="443" alt="image" src="https://user-images.githubusercontent.com/47208932/209459372-fb26d57e-35e7-48c0-a730-ddf30e3c461c.png">
+
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459341-e96bd71d-274f-456c-a61d-ec9defcb73b5.png">
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459348-ca485f91-7d13-4f79-ad20-79e2af11d6ab.png">
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459353-39fe4dc9-4ba2-4b5c-b0a4-699bb9098778.png">
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459359-e3d7cfde-080f-457a-ad5a-73d066c7c9c7.png">
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459372-fb26d57e-35e7-48c0-a730-ddf30e3c461c.png">
 
 
 

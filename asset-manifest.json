@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/amazon-music/static/css/main.fbc03a56.css",
-    "main.js": "/amazon-music/static/js/main.c7b1adf0.js",
+    "main.js": "/amazon-music/static/js/main.3ec97d54.js",
     "static/js/787.36ba9129.chunk.js": "/amazon-music/static/js/787.36ba9129.chunk.js",
     "static/media/6.mp3": "/amazon-music/static/media/6.152bf3df909b13a49766.mp3",
     "static/media/5.mp3": "/amazon-music/static/media/5.aebfc560566b940218b9.mp3",
@@ -19,11 +19,11 @@
     "static/media/logo.png": "/amazon-music/static/media/logo.27e0ea5fd2c0e3ab2114.png",
     "index.html": "/amazon-music/index.html",
     "main.fbc03a56.css.map": "/amazon-music/static/css/main.fbc03a56.css.map",
-    "main.c7b1adf0.js.map": "/amazon-music/static/js/main.c7b1adf0.js.map",
+    "main.3ec97d54.js.map": "/amazon-music/static/js/main.3ec97d54.js.map",
     "787.36ba9129.chunk.js.map": "/amazon-music/static/js/787.36ba9129.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fbc03a56.css",
-    "static/js/main.c7b1adf0.js"
+    "static/js/main.3ec97d54.js"
   ]
 }

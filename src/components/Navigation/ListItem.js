@@ -11,10 +11,14 @@ const ListItem = styled.li`
   height: 100%;
   width: 100%;
   justify-content: space-around;
-  max-width: 1600px;
-  margin-right: 30px;
+  margin-right: 25px;
 
   @media (max-width: 1280px) {
+    &:last-child {
+      display: none;
+    }
+
+  @media (max-width: 1024px) {
     width:150px;
     &:nth-last-child(2),&:nth-last-child(3) {
       display: none;

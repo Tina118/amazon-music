@@ -31,7 +31,7 @@ const useStyles = makeStyles(() => ({
 
   inputInput: {
     cursor: 'pointer',
-    width: '200px',
+    width: '150px',
     height: '40px',
     display: 'block',
     position: 'relative',
@@ -56,7 +56,7 @@ const Searchbar = () => {
   const classes = useStyles()
 
   return (
-    <Flex className={classes.search} marginLeft="350px">
+    <Flex className={classes.search} marginLeft="300px">
       <InputBase
         placeholder="Search…"
         classes={{

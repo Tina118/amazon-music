@@ -1,4 +1,4 @@
-**Clone of Amazon music - home page**
+# **Clone of Amazon music - home page**
 
 A simple replica of amazon music website
 

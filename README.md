@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+Clone of Amazon music - home page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple replica of amazon music website
 
-## Available Scripts
+Technology used : HTML, CSS , Javascript, React Packages used : Recoil(storage), material-ui(ui), styled-components(ui)
 
-In the project directory, you can run:
+Functionalities:
 
-### `npm start`
+1]A basic single page app ui:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/47208932/209458862-0d7f5f9f-8442-4349-9564-2163c994872b.png">
+<img width="945" alt="image" src="https://user-images.githubusercontent.com/47208932/209458915-d75482a8-9b3a-45d1-995a-9ff57bde776a.png">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2]Play/Pause feature on each card when hovered:
 
-### `npm test`
+<img width="926" alt="image" src="https://user-images.githubusercontent.com/47208932/209458929-a33923ae-60d8-462e-9d6d-c3586ec86dbb.png">
+<img width="934" alt="image" src="https://user-images.githubusercontent.com/47208932/209458934-a8631888-a1a4-4be4-bf84-c025e0093cf6.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3]A gif on that card which song is currntly playing. It will be only visible if song is currenly playing. It will hide if song is paused or completely played.
 
-### `npm run build`
+<img width="928" alt="image" src="https://user-images.githubusercontent.com/47208932/209458966-2cca6cb1-9abb-46f0-96c3-ebc86b24c118.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4]A footer which indication which details of current song being played, with forward/backward and play/pause button
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/47208932/209459000-b94ecec0-66be-430f-9e69-659febb2fa29.png">
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/47208932/209459004-8ef9120a-0e1f-4ef9-a3aa-c11979061fba.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+5]You can play next/previous song of a particular section by clicking on forward/backward button in footer
 
-### `npm run eject`
+<img width="934" alt="image" src="https://user-images.githubusercontent.com/47208932/209459087-c43988ae-72f6-41ac-83eb-bf5d1444fa20.png">
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+6]If song is played/paused or forwarded or backwarded from footer, the card will also get updated accordingly
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img width="943" alt="image" src="https://user-images.githubusercontent.com/47208932/209459125-88fe9606-874d-4749-b9e8-659802d3aa10.png">
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/47208932/209459133-a7fc8ac6-cfd5-4aab-bb4a-0b141a5f6e13.png">
+<img width="940" alt="image" src="https://user-images.githubusercontent.com/47208932/209459149-3870530c-91e9-413f-b0aa-72b974fc5de9.png">
+<img width="944" alt="image" src="https://user-images.githubusercontent.com/47208932/209459153-42e39174-aff5-44dd-a3b7-07e3d1855d22.png">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+7]If its first song of list, backward button will be disabled and if its last song of list, forward button will be disabled.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/47208932/209459183-fdad8f55-a492-4c0e-bbb8-a51cf651271f.png">
+<img width="947" alt="image" src="https://user-images.githubusercontent.com/47208932/209459194-d6fe835a-03c0-4298-9a77-aaab910bad2c.png">
 
-## Learn More
+8]If you pause a song from footer and start back from footer it will play again from the point it stopped.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<img width="937" alt="image" src="https://user-images.githubusercontent.com/47208932/209459227-b8de05b8-91f6-448b-8deb-a879d3611172.png">
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/47208932/209459231-2b26ebf8-a0df-41b8-8159-1ccfd717b9d2.png">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

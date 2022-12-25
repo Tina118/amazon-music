@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/amazon-music/static/css/main.fbc03a56.css",
+    "main.js": "/amazon-music/static/js/main.c7b1adf0.js",
+    "static/js/787.36ba9129.chunk.js": "/amazon-music/static/js/787.36ba9129.chunk.js",
+    "static/media/6.mp3": "/amazon-music/static/media/6.152bf3df909b13a49766.mp3",
+    "static/media/5.mp3": "/amazon-music/static/media/5.aebfc560566b940218b9.mp3",
+    "static/media/3.mp3": "/amazon-music/static/media/3.e35096a7a4e699dab7fa.mp3",
+    "static/media/2.mp3": "/amazon-music/static/media/2.e94f1da3507a7c828449.mp3",
+    "static/media/4.mp3": "/amazon-music/static/media/4.3d54673c9343b448bcad.mp3",
+    "static/media/1.mp3": "/amazon-music/static/media/1.e5f114b60c29c1f2f2fe.mp3",
+    "static/media/music.gif": "/amazon-music/static/media/music.c7dabd124480a685920e.gif",
+    "static/media/4.png": "/amazon-music/static/media/4.8e5d06841253ebdccf15.png",
+    "static/media/2.png": "/amazon-music/static/media/2.cb64d7dbd3804d888b4e.png",
+    "static/media/1.png": "/amazon-music/static/media/1.4e05f87577381e4ed7aa.png",
+    "static/media/5.png": "/amazon-music/static/media/5.4a9a237b72187645e70a.png",
+    "static/media/6.png": "/amazon-music/static/media/6.d1a25f69fa9bfb0f5023.png",
+    "static/media/3.png": "/amazon-music/static/media/3.b2a810ac961305abb4c3.png",
+    "static/media/logo.png": "/amazon-music/static/media/logo.27e0ea5fd2c0e3ab2114.png",
+    "index.html": "/amazon-music/index.html",
+    "main.fbc03a56.css.map": "/amazon-music/static/css/main.fbc03a56.css.map",
+    "main.c7b1adf0.js.map": "/amazon-music/static/js/main.c7b1adf0.js.map",
+    "787.36ba9129.chunk.js.map": "/amazon-music/static/js/787.36ba9129.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbc03a56.css",
+    "static/js/main.c7b1adf0.js"
+  ]
+}
